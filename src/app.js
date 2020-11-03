@@ -10,3 +10,4 @@ app.use('/api', covidCasesRouter);
 
 app.listen(3000, () => console.log('Server ready'));
 
+module.exports = app;
