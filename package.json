@@ -4,7 +4,8 @@
   "description": "REST API challenge",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon src/app.js",
+    "test": ""
   },
   "author": "Jose de Jesus Amaya",
   "license": "ISC",

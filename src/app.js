@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json());
 
 const covidCasesRouter = require('./routes/covid');
-app.use('/covid', covidCasesRouter);
+app.use('/api', covidCasesRouter);
 
 app.listen(3000, () => console.log('Server ready'));
+
