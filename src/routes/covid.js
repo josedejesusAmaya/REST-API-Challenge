@@ -26,6 +26,20 @@ router.get('/info', async (req, res) => {
         });
 })
 
+// Returns a JSON file with info about the NASA astronauts
+router.get('/astronauts', (req, res) => {
+    var jsonfile = require('jsonfile');
+    var file = './infrastructure/astronauts.json'
+    jsonfile.readFile(file, function(err, obj) {
+        if(err) {
+          res.send({status: 'error', reason: err.toString()});
+          return;
+        }
+    
+        res.send(obj);
+    });
+})
+
 function covidAPI() {
     return fetch('https://overflow.ai/coronavirus/api')
         .then(promise => promise.json())
